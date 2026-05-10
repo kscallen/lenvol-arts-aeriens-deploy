@@ -25,13 +25,23 @@ function injectHeader() {
             <a class="nav-link text-on-surface hover:text-primary-fixed-dim transition-colors font-label-caps text-label-caps" href="contact.html">Contact</a>
         </nav>
         <div class="flex items-center gap-4">
-            <a href="https://clients.mindbodyonline.com/classic/ws?studioid=5751367&stype=-101" target="_blank" class="hidden lg:block text-primary font-button-text text-button-text px-4 py-2 hover:bg-primary/10 transition-all duration-300 rounded">Espace Client</a>
-            <a href="https://clients.mindbodyonline.com/classic/ws?studioid=5751367&stype=-7&sTG=26&sView=week&sLoc=0" target="_blank" class="bg-primary text-on-primary px-6 py-3 rounded font-button-text text-button-text hover-gold-glow">Réserver</a>
+            <a id="header-espace-client" href="espace-client.html" class="hidden lg:block text-primary font-button-text text-button-text px-4 py-2 hover:bg-primary/10 transition-all duration-300 rounded">Espace Client</a>
+            <a href="horaire.html" class="bg-primary text-on-primary px-6 py-3 rounded font-button-text text-button-text hover-gold-glow">Réserver</a>
         </div>
     </div>
     `;
 
     headerPlaceholder.innerHTML = headerHTML;
+
+    // Check session to update "Espace Client" text
+    if (window.supabase) {
+        window.supabase.auth.getSession().then(({ data: { session } }) => {
+            if (session) {
+                const link = document.getElementById('header-espace-client');
+                if (link) link.textContent = 'Mon Compte';
+            }
+        });
+    }
 }
 
 function injectFooter() {

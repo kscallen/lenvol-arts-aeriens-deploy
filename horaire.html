@@ -9,9 +9,11 @@
     <!-- Scripts & Styles -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/tailwind-config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Sora:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary/30">
     
@@ -51,172 +53,14 @@
 
         <!-- Weekly Schedule Grid -->
         <section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap overflow-x-auto">
-            <div class="grid grid-cols-7 min-w-[1200px] gap-gutter">
-                <!-- Days Columns -->
-                <!-- Lundi -->
-                <div class="space-y-6">
-                    <div class="text-center py-4 border-b border-outline-variant mb-6">
-                        <h3 class="font-heading text-sm font-bold text-on-surface uppercase tracking-widest">Lundi</h3>
-                        <p class="text-on-surface-variant text-xs mt-1">12 Mai</p>
-                    </div>
-                    <!-- Course Block 1 -->
-                    <div class="glass-card p-4 rounded-xl group hover:border-primary/50 transition-all duration-300 flex flex-col gap-3">
-                        <div class="flex justify-between items-start">
-                            <span class="bg-primary/20 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">Pole Intro</span>
-                            <span class="font-heading font-bold text-[12px] text-on-surface">17:30</span>
-                        </div>
-                        <div>
-                            <p class="font-heading font-bold text-lg text-primary mb-1">Pole Fitness 1</p>
-                            <div class="flex items-center gap-2 text-on-surface-variant">
-                                <span class="material-symbols-outlined text-[16px]">person</span>
-                                <span class="font-body-md text-sm">Karine B.</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2 text-error text-[12px] font-bold">
-                            <span class="material-symbols-outlined text-[14px]">event_seat</span>
-                            3 places restantes
-                        </div>
-                        <a href="https://clients.mindbodyonline.com/classic/ws?studioid=5751367&stype=-7&sTG=26&sView=week&sLoc=0" target="_blank" class="w-full mt-2 py-2 bg-primary/10 border border-primary/20 hover:bg-primary hover:text-on-primary transition-all rounded font-heading font-bold text-sm inline-block text-center">Réserver</a>
-                    </div>
-                    <!-- Course Block 2 -->
-                    <div class="glass-card p-4 rounded-xl group hover:border-primary/50 transition-all duration-300 flex flex-col gap-3 opacity-60">
-                        <div class="flex justify-between items-start">
-                            <span class="bg-surface-variant text-on-surface-variant text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">Avancé</span>
-                            <span class="font-heading font-bold text-[12px] text-on-surface">19:00</span>
-                        </div>
-                        <div>
-                            <p class="font-heading font-bold text-lg text-primary mb-1">Cerceau Aérien 3</p>
-                            <div class="flex items-center gap-2 text-on-surface-variant">
-                                <span class="material-symbols-outlined text-[16px]">person</span>
-                                <span class="font-body-md text-sm">Marie-Eve S.</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2 text-on-surface-variant text-[12px]">
-                            <span class="material-symbols-outlined text-[14px]">block</span>
-                            Complet
-                        </div>
-                        <button class="w-full mt-2 py-2 bg-transparent border border-outline-variant text-on-surface-variant cursor-not-allowed rounded font-heading font-bold text-sm" disabled="">Liste d&apos;attente</button>
-                    </div>
-                </div>
-                <!-- Mardi -->
-                <div class="space-y-6">
-                    <div class="text-center py-4 border-b border-outline-variant mb-6">
-                        <h3 class="font-heading text-sm font-bold text-on-surface uppercase tracking-widest">Mardi</h3>
-                        <p class="text-on-surface-variant text-xs mt-1">13 Mai</p>
-                    </div>
-                    <!-- Course Block -->
-                    <div class="glass-card p-4 rounded-xl group hover:border-primary/50 transition-all duration-300 flex flex-col gap-3">
-                        <div class="flex justify-between items-start">
-                            <span class="bg-primary/20 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">Tous niveaux</span>
-                            <span class="font-heading font-bold text-[12px] text-on-surface">18:00</span>
-                        </div>
-                        <div>
-                            <p class="font-heading font-bold text-lg text-primary mb-1">Souplesse active</p>
-                            <div class="flex items-center gap-2 text-on-surface-variant">
-                                <span class="material-symbols-outlined text-[16px]">person</span>
-                                <span class="font-body-md text-sm">Jessica L.</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2 text-primary text-[12px] font-bold">
-                            <span class="material-symbols-outlined text-[14px]">event_seat</span>
-                            8 places disponibles
-                        </div>
-                        <a href="https://clients.mindbodyonline.com/classic/ws?studioid=5751367&stype=-7&sTG=26&sView=week&sLoc=0" target="_blank" class="w-full mt-2 py-2 bg-primary/10 border border-primary/20 hover:bg-primary hover:text-on-primary transition-all rounded font-heading font-bold text-sm inline-block text-center">Réserver</a>
-                    </div>
-                </div>
-                <!-- Mercredi -->
-                <div class="space-y-6">
-                    <div class="text-center py-4 border-b border-outline-variant mb-6">
-                        <h3 class="font-heading text-sm font-bold text-on-surface uppercase tracking-widest">Mercredi</h3>
-                        <p class="text-on-surface-variant text-xs mt-1">14 Mai</p>
-                    </div>
-                    <div class="glass-card p-4 rounded-xl group hover:border-primary/50 transition-all duration-300 flex flex-col gap-3">
-                        <div class="flex justify-between items-start">
-                            <span class="bg-primary/20 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">Intermédiaire</span>
-                            <span class="font-heading font-bold text-[12px] text-on-surface">17:00</span>
-                        </div>
-                        <div>
-                            <p class="font-heading font-bold text-lg text-primary mb-1">Tissus Aériens 2</p>
-                            <div class="flex items-center gap-2 text-on-surface-variant">
-                                <span class="material-symbols-outlined text-[16px]">person</span>
-                                <span class="font-body-md text-sm">David R.</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2 text-error text-[12px] font-bold">
-                            <span class="material-symbols-outlined text-[14px]">event_seat</span>
-                            1 place restante
-                        </div>
-                        <a href="https://clients.mindbodyonline.com/classic/ws?studioid=5751367&stype=-7&sTG=26&sView=week&sLoc=0" target="_blank" class="w-full mt-2 py-2 bg-primary/10 border border-primary/20 hover:bg-primary hover:text-on-primary transition-all rounded font-heading font-bold text-sm inline-block text-center">Réserver</a>
-                    </div>
-                </div>
-                <!-- Jeudi -->
-                <div class="space-y-6">
-                    <div class="text-center py-4 border-b border-outline-variant mb-6">
-                        <h3 class="font-heading text-sm font-bold text-on-surface uppercase tracking-widest">Jeudi</h3>
-                        <p class="text-on-surface-variant text-xs mt-1">15 Mai</p>
-                    </div>
-                    <div class="glass-card p-4 rounded-xl group hover:border-primary/50 transition-all duration-300 flex flex-col gap-3">
-                        <div class="flex justify-between items-start">
-                            <span class="bg-primary/20 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">Intro</span>
-                            <span class="font-heading font-bold text-[12px] text-on-surface">19:30</span>
-                        </div>
-                        <div>
-                            <p class="font-heading font-bold text-lg text-primary mb-1">Hamac Aérien</p>
-                            <div class="flex items-center gap-2 text-on-surface-variant">
-                                <span class="material-symbols-outlined text-[16px]">person</span>
-                                <span class="font-body-md text-sm">Karine B.</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2 text-primary text-[12px] font-bold">
-                            <span class="material-symbols-outlined text-[14px]">event_seat</span>
-                            5 places disponibles
-                        </div>
-                        <a href="https://clients.mindbodyonline.com/classic/ws?studioid=5751367&stype=-7&sTG=26&sView=week&sLoc=0" target="_blank" class="w-full mt-2 py-2 bg-primary/10 border border-primary/20 hover:bg-primary hover:text-on-primary transition-all rounded font-heading font-bold text-sm inline-block text-center">Réserver</a>
-                    </div>
-                </div>
-                <!-- Vendredi -->
-                <div class="space-y-6">
-                    <div class="text-center py-4 border-b border-outline-variant mb-6">
-                        <h3 class="font-heading text-sm font-bold text-on-surface uppercase tracking-widest">Vendredi</h3>
-                        <p class="text-on-surface-variant text-xs mt-1">16 Mai</p>
-                    </div>
-                    <div class="py-12 text-center text-on-surface-variant/30 italic font-body-md text-sm">Pas de cours planifié</div>
-                </div>
-                <!-- Samedi -->
-                <div class="space-y-6">
-                    <div class="text-center py-4 border-b border-outline-variant mb-6">
-                        <h3 class="font-heading text-sm font-bold text-on-surface uppercase tracking-widest">Samedi</h3>
-                        <p class="text-on-surface-variant text-xs mt-1">17 Mai</p>
-                    </div>
-                    <div class="glass-card p-4 rounded-xl group hover:border-primary/50 transition-all duration-300 flex flex-col gap-3">
-                        <div class="flex justify-between items-start">
-                            <span class="bg-primary/20 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">Atelier</span>
-                            <span class="font-heading font-bold text-[12px] text-on-surface">10:00</span>
-                        </div>
-                        <div>
-                            <p class="font-heading font-bold text-lg text-primary mb-1">Chorégraphie Pole</p>
-                            <div class="flex items-center gap-2 text-on-surface-variant">
-                                <span class="material-symbols-outlined text-[16px]">person</span>
-                                <span class="font-body-md text-sm">Marie-Eve S.</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2 text-primary text-[12px] font-bold">
-                            <span class="material-symbols-outlined text-[14px]">event_seat</span>
-                            10 places disponibles
-                        </div>
-                        <a href="https://clients.mindbodyonline.com/classic/ws?studioid=5751367&stype=-7&sTG=26&sView=week&sLoc=0" target="_blank" class="w-full mt-2 py-2 bg-primary/10 border border-primary/20 hover:bg-primary hover:text-on-primary transition-all rounded font-heading font-bold text-sm inline-block text-center">Réserver</a>
-                    </div>
-                </div>
-                <!-- Dimanche -->
-                <div class="space-y-6">
-                    <div class="text-center py-4 border-b border-outline-variant mb-6">
-                        <h3 class="font-heading text-sm font-bold text-on-surface uppercase tracking-widest">Dimanche</h3>
-                        <p class="text-on-surface-variant text-xs mt-1">18 Mai</p>
-                    </div>
-                    <div class="py-12 text-center text-on-surface-variant/30 italic font-body-md text-sm">Studio fermé</div>
+            <div id="schedule-grid" class="grid grid-cols-7 min-w-[1200px] gap-gutter">
+                <!-- Loading State -->
+                <div class="col-span-7 py-20 text-center opacity-40 italic font-heading">
+                    Chargement de l'horaire...
                 </div>
             </div>
         </section>
+
 
         <!-- CTA Section -->
         <section class="mb-24 px-margin-desktop">
@@ -241,6 +85,83 @@
     </footer>
 
     <!-- Component Injection -->
+    <script src="js/supabase-client.js"></script>
     <script src="js/components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const grid = document.getElementById('schedule-grid');
+            const { data: classes, error } = await window.mindbodyService.getClasses();
+            
+            if (error) {
+                grid.innerHTML = `<div class="col-span-7 py-20 text-center text-error">Erreur lors du chargement de l'horaire.</div>`;
+                return;
+            }
+
+            // Group by day of week
+            const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+            const grouped = days.reduce((acc, day) => ({ ...acc, [day]: [] }), {});
+            
+            classes.forEach(c => {
+                const date = new Date(c.start_date_time);
+                let dayName = date.toLocaleDateString('fr-CA', { weekday: 'long' });
+                dayName = dayName.charAt(0).toUpperCase() + dayName.slice(1);
+                if (grouped[dayName]) grouped[dayName].push(c);
+            });
+
+            grid.innerHTML = days.map(day => `
+                <div class="space-y-6">
+                    <div class="text-center py-4 border-b border-outline-variant mb-6">
+                        <h3 class="font-heading text-sm font-bold text-on-surface uppercase tracking-widest">${day}</h3>
+                        <p class="text-on-surface-variant text-xs mt-1">Saison 2024</p>
+                    </div>
+                    ${grouped[day].length > 0 ? grouped[day].map(c => {
+                        const spotsLeft = c.max_capacity - c.total_booked;
+                        const isFull = spotsLeft <= 0;
+                        return `
+                            <div class="glass-card p-4 rounded-xl group hover:border-primary/50 transition-all duration-300 flex flex-col gap-3 ${isFull ? 'opacity-60' : ''}">
+                                <div class="flex justify-between items-start">
+                                    <span class="bg-primary/20 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">${c.discipline}</span>
+                                    <span class="font-heading font-bold text-[12px] text-on-surface">${new Date(c.start_date_time).toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' })}</span>
+                                </div>
+                                <div>
+                                    <p class="font-heading font-bold text-lg text-primary mb-1">${c.name}</p>
+                                    <div class="flex items-center gap-2 text-on-surface-variant">
+                                        <span class="material-symbols-outlined text-[16px]">person</span>
+                                        <span class="font-body-md text-sm">${c.staff_name}</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 text-[12px] font-bold ${isFull ? 'text-on-surface-variant' : (spotsLeft < 3 ? 'text-error' : 'text-primary')}">
+                                    <span class="material-symbols-outlined text-[14px]">${isFull ? 'block' : 'event_seat'}</span>
+                                    ${isFull ? 'Complet' : `${spotsLeft} places restantes`}
+                                </div>
+                                ${isFull 
+                                    ? `<button class="w-full mt-2 py-2 bg-transparent border border-outline-variant text-on-surface-variant cursor-not-allowed rounded font-heading font-bold text-sm" disabled>Liste d'attente</button>`
+                                    : `<button onclick="bookClass('${c.id}')" class="w-full mt-2 py-2 bg-primary/10 border border-primary/20 hover:bg-primary hover:text-on-primary transition-all rounded font-heading font-bold text-sm">Réserver</button>`
+                                }
+                            </div>
+                        `;
+                    }).join('') : `<div class="py-12 text-center text-on-surface-variant/30 italic font-body-md text-sm">Pas de cours planifié</div>`}
+                </div>
+            `).join('');
+        });
+
+        async function bookClass(classId) {
+            const user = await window.mindbodyService.getCurrentUser();
+            if (!user) {
+                window.location.href = 'espace-client.html?redirect=horaire';
+                return;
+            }
+
+            if (confirm("Voulez-vous réserver ce cours ?")) {
+                const { error } = await window.mindbodyService.bookClass(user.id, classId);
+                if (error) alert(error.message);
+                else {
+                    alert("Réservation réussie !");
+                    window.location.reload();
+                }
+            }
+        }
+    </script>
 </body>
 </html>
+
