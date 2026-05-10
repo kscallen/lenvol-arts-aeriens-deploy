@@ -44,7 +44,7 @@ function injectFooter() {
             <div class="font-display-hero text-headline-md text-primary">L'ENVOL</div>
             <p class="font-body-md text-on-surface-variant">Viens prendre ton envol avec nous dans un espace dédié à l'excellence et au dépassement.</p>
             <div class="flex gap-4">
-                <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary transition-colors group" href="https://www.facebook.com/p/LEnvol-Arts-Ariens-61581048196675/">
+                <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary transition-colors group" href="https://www.facebook.com/p/LEnvol-Arts-Aeriens-61581048196675/">
                     <span class="material-symbols-outlined text-white group-hover:text-on-primary">group</span>
                 </a>
             </div>
