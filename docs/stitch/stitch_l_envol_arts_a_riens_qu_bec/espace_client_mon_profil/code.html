@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr-CA"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Espace Client | L'ENVOL Arts Aériens</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-tertiary-container": "#454545",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-bright": "#393939",
+                    "secondary": "#c6c6c7",
+                    "surface-tint": "#e9c349",
+                    "surface": "#131313",
+                    "primary-container": "#d4af37",
+                    "outline-variant": "#4d4635",
+                    "surface-container": "#1f1f1f",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-secondary-container": "#b4b5b5",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-surface": "#e2e2e2",
+                    "error-container": "#93000a",
+                    "on-tertiary": "#313030",
+                    "surface-container-highest": "#353535",
+                    "on-primary": "#3c2f00",
+                    "tertiary-fixed": "#e5e2e1",
+                    "secondary-container": "#454747",
+                    "outline": "#99907c",
+                    "inverse-surface": "#e2e2e2",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#131313",
+                    "primary-fixed": "#ffe088",
+                    "tertiary-container": "#b5b2b2",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-background": "#e2e2e2",
+                    "surface-container-high": "#2a2a2a",
+                    "inverse-primary": "#735c00",
+                    "surface-variant": "#353535",
+                    "on-primary-fixed": "#241a00",
+                    "background": "#131313",
+                    "surface-container-low": "#1b1b1b",
+                    "inverse-on-surface": "#303030",
+                    "primary": "#f2ca50",
+                    "on-surface-variant": "#d0c5af",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "tertiary": "#d0cecd",
+                    "on-primary-container": "#554300",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-secondary": "#2f3131",
+                    "on-error-container": "#ffdad6",
+                    "on-error": "#690005"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "margin-desktop": "80px",
+                    "base": "4px",
+                    "margin-mobile": "20px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Sora"],
+                    "display-hero-mobile": ["Playfair Display"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "display-hero": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Sora"],
+                    "headline-lg": ["Playfair Display"],
+                    "button-text": ["Sora"]
+            },
+            "fontSize": {
+                    "label-caps": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "display-hero-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-hero": ["84px", {"lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                    "button-text": ["16px", {"lineHeight": "20px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+        }
+        .ribbon-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            position: relative;
+            overflow: hidden;
+        }
+        .ribbon-divider::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+            animation: ribbonFlow 3s infinite linear;
+        }
+        @keyframes ribbonFlow {
+            100% { left: 100%; }
+        }
+        .aura-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .aura-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-background/80 backdrop-blur-xl dark:bg-background/80 docked full-width top-0 sticky z-50 border-b border-primary/20 shadow-2xl">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-display-hero text-headline-md text-primary tracking-widest">L'ENVOL</div>
+<div class="hidden md:flex gap-8 items-center font-label-caps text-label-caps">
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">À Propos</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">Cours</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">Horaire</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">Évènements</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">Galerie</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1">Espace Client</button>
+<button class="aura-btn bg-primary text-on-primary font-button-text text-button-text px-6 py-2 rounded-lg">Réserver</button>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Welcome Header -->
+<section class="mb-12">
+<h1 class="font-display-hero text-headline-lg text-primary-fixed mb-2">Tableau de bord</h1>
+<p class="font-body-lg text-on-surface-variant">Bienvenue de nouveau, Karine. Prête à prendre votre envol ?</p>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Account Summary (Large Card) -->
+<div class="md:col-span-8 space-y-gutter">
+<!-- Account Balance & Quick Actions -->
+<div class="glass-card rounded-xl p-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">Solde du Compte</p>
+<h2 class="font-display-hero text-headline-lg text-primary">125,00 $</h2>
+<p class="font-body-md text-on-surface-variant">Valide jusqu'au 15 déc. 2024</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<button class="aura-btn bg-primary text-on-primary font-button-text text-button-text px-8 py-3 rounded-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add_card</span>
+                            Ajouter des crédits
+                        </button>
+<button class="hover:bg-primary/10 text-primary border border-primary/40 font-button-text text-button-text px-8 py-3 rounded-lg flex items-center justify-center gap-2 transition-all">
+                            Payer un forfait
+                        </button>
+</div>
+</div>
+<!-- Upcoming Classes -->
+<div class="glass-card rounded-xl p-8">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline-md text-on-surface flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+                            Mes Prochaines Classes
+                        </h3>
+<a class="font-label-caps text-label-caps text-primary hover:underline" href="#">Voir tout</a>
+</div>
+<div class="space-y-4">
+<!-- Class Item 1 -->
+<div class="flex flex-col sm:flex-row items-center gap-6 p-4 rounded-lg bg-surface-container-low border border-outline-variant/30 hover:border-primary/50 transition-all">
+<div class="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="A professional aerialist performing on a hoop against a dark, moody studio background. The lighting is cinematic with golden rim light highlighting the athlete's muscular form and focused expression, reflecting the elite and ethereal brand identity of L'Envol." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASu6zypPJWSfgHp_I41AjbSXu4mst2s0nLlxYJNzATs9p229xOMC1aoeW_Geg7URTgSBMi9jy1wRxF_4RIGvG4B_rpjVnV-uQZd-HWgMhNkR2J4Ed1AsCSsvpo9XkpLujgPO889gMEwVn72ZaKED498BTNpeWEBx-iJ88Q1vCP_kgOvEoduDMz9OKwNZ7MdOuoh9GNy8SQudXQyEb-vs5GkgBbOmuX100VK_mRwbrwKBZuAMJG9MBUU7SFToBDp1kvF9IYjAriTXA"/>
+</div>
+<div class="flex-grow text-center sm:text-left">
+<h4 class="font-headline-md text-body-lg text-primary">Cerceau Aérien - Niveau 2</h4>
+<p class="text-on-surface-variant font-body-md">Mardi, 14 Mai • 18:30 - 20:00</p>
+<p class="text-on-surface-variant text-sm flex items-center justify-center sm:justify-start gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                    Studio Principal (Québec)
+                                </p>
+</div>
+<div class="shrink-0 flex gap-2">
+<button class="p-2 hover:bg-error/10 text-error rounded-full transition-colors" title="Annuler">
+<span class="material-symbols-outlined">cancel</span>
+</button>
+<button class="p-2 hover:bg-primary/10 text-primary rounded-full transition-colors" title="Détails">
+<span class="material-symbols-outlined">info</span>
+</button>
+</div>
+</div>
+<!-- Class Item 2 -->
+<div class="flex flex-col sm:flex-row items-center gap-6 p-4 rounded-lg bg-surface-container-low border border-outline-variant/30 hover:border-primary/50 transition-all">
+<div class="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Close-up of hands gripping red aerial silks, showing the texture of the fabric and the tension in the gymnast's muscles. Deep shadows and gold highlights emphasize the dramatic and athletic nature of the sport in a high-contrast cinematic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtfrtN6oW2VqC2z42hHBUrcPk6Hw1bCkhHIDS0OFNI3RQfu_kp94I49DTG3lA98mx1QDIekyG0HeFKYEVLe7Ac-A2q0iBHwHzql0I_EPgeWt6n1615CjuCQ7NG0WyoEDOjvyiqohkZyys5-yLhnI5KWeM-ralLQvjpEslIsf8yKFdGbq20OTBn7TfIiNBRGSjS2jeE7rdsGOSFT6izrOLFSbh76_MKTyEw3FiXPiQEdgywofREX4cbeX5-Y2A01kGrjcQFezbozVI"/>
+</div>
+<div class="flex-grow text-center sm:text-left">
+<h4 class="font-headline-md text-body-lg text-primary">Tissus Aériens - Débutant</h4>
+<p class="text-on-surface-variant font-body-md">Vendredi, 17 Mai • 17:00 - 18:30</p>
+<p class="text-on-surface-variant text-sm flex items-center justify-center sm:justify-start gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                    Salle de répétition A
+                                </p>
+</div>
+<div class="shrink-0 flex gap-2">
+<button class="p-2 hover:bg-error/10 text-error rounded-full transition-colors" title="Annuler">
+<span class="material-symbols-outlined">cancel</span>
+</button>
+<button class="p-2 hover:bg-primary/10 text-primary rounded-full transition-colors" title="Détails">
+<span class="material-symbols-outlined">info</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Profile & Payments (Sidebar Cards) -->
+<div class="md:col-span-4 space-y-gutter">
+<!-- Quick Profile Card -->
+<div class="glass-card rounded-xl p-8 text-center">
+<div class="w-24 h-24 mx-auto rounded-full border-2 border-primary p-1 mb-4">
+<div class="w-full h-full rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+</div>
+<h3 class="font-headline-md text-on-surface">Karine Brunet</h3>
+<p class="text-on-surface-variant mb-6">Membre Élite depuis 2022</p>
+<div class="ribbon-divider mb-6"></div>
+<ul class="text-left space-y-4 font-body-md">
+<li class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">settings</span> Mon Profil
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">history</span> Historique des classes
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">notifications</span> Notifications
+                        </li>
+</ul>
+</div>
+<!-- Payment History -->
+<div class="glass-card rounded-xl p-6">
+<h3 class="font-headline-md text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">receipt_long</span>
+                        Paiements
+                    </h3>
+<div class="space-y-4">
+<div class="flex justify-between items-start pb-4 border-b border-outline-variant/30">
+<div>
+<p class="font-body-md text-on-surface">Forfait 10 Sessions</p>
+<p class="text-sm text-on-surface-variant">02 Mai 2024</p>
+</div>
+<p class="font-label-caps text-primary">240,00 $</p>
+</div>
+<div class="flex justify-between items-start pb-4 border-b border-outline-variant/30">
+<div>
+<p class="font-body-md text-on-surface">Crédit unique</p>
+<p class="text-sm text-on-surface-variant">25 Avr 2024</p>
+</div>
+<p class="font-label-caps text-primary">35,00 $</p>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-body-md text-on-surface">Inscription Annuelle</p>
+<p class="text-sm text-on-surface-variant">10 Jan 2024</p>
+</div>
+<p class="font-label-caps text-primary">150,00 $</p>
+</div>
+</div>
+<button class="w-full mt-6 text-center text-sm font-label-caps text-on-surface-variant hover:text-primary transition-colors">
+                        Télécharger tout l'historique (PDF)
+                    </button>
+</div>
+</div>
+</div>
+<!-- Call to Action Banner -->
+<section class="mt-section-gap">
+<div class="relative overflow-hidden rounded-3xl h-[300px] flex items-center justify-center bg-surface-container-high border border-primary/10">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 mix-blend-overlay" data-alt="A wide cinematic shot of an aerial yoga studio with ambient lighting casting long shadows on the polished floors. Silks in various colors hang from the high ceiling, and the atmosphere is serene, elite, and professionally organized, capturing the essence of the Quebec City studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiZmX_FZQM7EWykPIX1O5XeiCG3MslCXLGfQXUl94w1O2xU4O-_3lq0mqpH7Ug5GtfkKMumlOIauAoDwqGS38AJUCVIWV-mCLMl68cLOmo5oAwA2fjDHCHr87Nb7KhNxgqr1IsMJfY-lpZ6tqvpl4VpzZ9GBo4jO4ys4NLX9QuIvyDkm81kzcooDwwbyJMscAIjIY8UF1akJm9v1N3mHFZKrwWnX7DytykR-nuksLufJknxgQm_IAxvy7IuT1IzOBki9TZz7q71IY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background"></div>
+</div>
+<div class="relative z-10 text-center px-6">
+<h2 class="font-display-hero text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Envie d'explorer une nouvelle discipline ?</h2>
+<p class="font-body-lg text-on-surface-variant mb-8 max-w-2xl mx-auto">Profitez de 15% de rabais sur votre premier cours de Pole Fitness ce mois-ci.</p>
+<button class="aura-btn bg-primary text-on-primary font-button-text text-button-text px-10 py-4 rounded-lg">Découvrir le Pole Fitness</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width py-section-gap border-t border-outline-variant mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-display-hero text-headline-md text-primary">L'ENVOL</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                    Le premier studio d'arts aériens à Québec. Prenez votre envol dans un cadre professionnel et sécuritaire.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">social_leaderboard</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">photo_camera</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">videocam</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary">Liens Légaux</h4>
+<ul class="space-y-2 font-body-md text-on-surface-variant">
+<li class="hover:text-primary-fixed transition-colors cursor-pointer">Conditions d'utilisation</li>
+<li class="hover:text-primary-fixed transition-colors cursor-pointer">Politique de confidentialité</li>
+<li class="hover:text-primary-fixed transition-colors cursor-pointer">Foire aux questions</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary">Liens Rapides</h4>
+<ul class="space-y-2 font-body-md text-on-surface-variant">
+<li class="hover:text-primary-fixed transition-colors cursor-pointer">À propos</li>
+<li class="hover:text-primary-fixed transition-colors cursor-pointer">Cours</li>
+<li class="hover:text-primary-fixed transition-colors cursor-pointer">Horaire et Tarifs</li>
+<li class="hover:text-primary-fixed transition-colors cursor-pointer">Galerie</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary">Nos coordonnées</h4>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">location_on</span>
+<span>454 Av. Marconi,<br/>Québec, QC, G1N 4A8</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+<span>lenvol.arts.aeriens@gmail.com</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+<span>(418) 431-7010</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-outline-variant/20 px-margin-desktop max-w-container-max mx-auto text-center font-body-md text-on-surface-variant opacity-60">
+            © 2024 L'Envol Arts Aériens. Tous droits réservés. Propulsé par la passion.
+        </div>
+</footer>
+</body></html>

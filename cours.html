@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr-CA">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Nos Cours | L'ENVOL Arts Aériens</title>
+    
+    <!-- Scripts & Styles -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+    <link href="index.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Sora:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    
+    <!-- Shared Components -->
+    <script src="js/components.js" defer></script>
+    
+</head>
+<body class="bg-background text-on-background font-body-md">
+    <!-- Top Navigation Bar -->
+    <header id="main-header" class="bg-background/80 backdrop-blur-xl dark:bg-background/80 docked full-width top-0 sticky z-50 border-b border-primary/20 shadow-2xl">
+        <!-- Injected by js/components.js -->
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <img src="assets/aerial-silks-cta.png" alt="Courses Hero" class="absolute inset-0 w-full h-full object-cover opacity-40 premium-cinematic">
+        <div class="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background"></div>
+        <div class="relative z-10 text-center px-margin-desktop max-w-4xl">
+            <h1 class="font-display text-5xl md:text-7xl text-white mb-6 uppercase tracking-tight">Nos <span class="text-primary">Disciplines</span></h1>
+            <p class="text-xl text-on-surface-variant max-w-2xl mx-auto">
+                De l'initiation à la performance, trouvez l'envol qui vous ressemble.
+            </p>
+        </div>
+    </section>
+
+    <!-- Classes Intro -->
+    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto text-center">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <h2 class="font-display text-3xl text-white">Une approche personnalisée</h2>
+            <p class="text-on-surface-variant leading-relaxed">
+                Que vous soyez un athlète accompli ou que vous n'ayez jamais fait de sport, nos cours sont adaptés pour vous. Nous mettons l'accent sur la technique, la sécurité et surtout, le plaisir de progresser.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-8">
+                <span class="level-pill">Débutant</span>
+                <span class="level-pill">Intermédiaire</span>
+                <span class="level-pill">Avancé</span>
+                <span class="level-pill">Privé</span>
+                <span class="level-pill">Groupe</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disciplines Grid -->
+    <section class="pb-section-gap px-margin-desktop max-w-container-max mx-auto">
+        <div class="grid grid-cols-1 gap-16">
+            <!-- Pole Fitness -->
+            <div class="glass-card rounded-3xl overflow-hidden flex flex-col lg:flex-row items-stretch">
+                <div class="lg:w-1/2">
+                    <img src="assets/pole-fitness.png" alt="Pole Fitness" class="w-full h-full object-cover min-h-[400px] premium-cinematic">
+                </div>
+                <div class="lg:w-1/2 p-12 lg:p-20 flex flex-col justify-center space-y-8">
+                    <div class="space-y-4">
+                        <h3 class="font-display text-4xl text-primary">Pole Fitness</h3>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Alliez force athlétique, souplesse et grâce chorégraphique. Le pole fitness est une discipline complète qui sollicite tous les muscles de votre corps tout en boostant votre confiance en vous.
+                        </p>
+                    </div>
+                    <ul class="space-y-3 text-on-surface/80">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Renforcement musculaire complet</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Apprentissage de figures acrobatiques</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Fluidité et enchaînements</li>
+                    </ul>
+                    <a href="horaire.html" class="inline-flex items-center gap-2 text-primary font-label text-sm uppercase tracking-widest group">
+                        Voir les disponibilités <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cerceau Aérien -->
+            <div class="glass-card rounded-3xl overflow-hidden flex flex-col lg:flex-row-reverse items-stretch">
+                <div class="lg:w-1/2">
+                    <img src="assets/aerial-hoop.png" alt="Cerceau Aérien" class="w-full h-full object-cover min-h-[400px] premium-cinematic">
+                </div>
+                <div class="lg:w-1/2 p-12 lg:p-20 flex flex-col justify-center space-y-8">
+                    <div class="space-y-4">
+                        <h3 class="font-display text-4xl text-primary">Cerceau Aérien</h3>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            L'art de la contorsion et de l'équilibre dans les airs. Le cerceau (Hoop) permet de créer des figures élégantes et dynamiques dans un cadre circulaire suspendu.
+                        </p>
+                    </div>
+                    <ul class="space-y-3 text-on-surface/80">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Travail de la souplesse et de l'équilibre</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Figures esthétiques et aériennes</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Dynamisme et spins</li>
+                    </ul>
+                    <a href="horaire.html" class="inline-flex items-center gap-2 text-primary font-label text-sm uppercase tracking-widest group">
+                        Voir les disponibilités <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tissus & Hamac -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Tissus -->
+                <div class="glass-card rounded-3xl overflow-hidden flex flex-col">
+                    <div class="h-80">
+                        <img src="assets/hero-aerial-silks.png" alt="Tissus Aériens" class="w-full h-full object-cover premium-cinematic">
+                    </div>
+                    <div class="p-12 space-y-6">
+                        <h3 class="font-display text-3xl text-primary">Tissus Aériens</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Grimpez, chutez et volez avec fluidité. Le tissus aérien demande concentration et contrôle pour réaliser des enchaînements spectaculaires.
+                        </p>
+                        <a href="horaire.html" class="inline-flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest group">
+                            Découvrir <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Hamac -->
+                <div class="glass-card rounded-3xl overflow-hidden flex flex-col">
+                    <div class="h-80">
+                        <img src="assets/aerial-hammock.png" alt="Hamac Aérien" class="w-full h-full object-cover premium-cinematic">
+                    </div>
+                    <div class="p-12 space-y-6">
+                        <h3 class="font-display text-3xl text-primary">Hamac Aérien</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Une approche plus sculpturale et accessible. Le hamac offre un support qui permet d'explorer des postures inversées et des figures de force avec élégance.
+                        </p>
+                        <a href="horaire.html" class="inline-flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest group">
+                            Découvrir <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTAs -->
+    <section class="relative py-section-gap overflow-hidden">
+        <div class="absolute inset-0 bg-primary/10">
+            <img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30 premium-cinematic" alt="Golden Hour Performer" src="assets/aerial-silks-cta.png">
+        </div>
+        <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto text-center">
+            <h2 class="font-headline-lg text-display-hero text-white mb-8">Prête à t'envoler&nbsp;?</h2>
+            <a href="https://clients.mindbodyonline.com/classic/ws?studioid=5751367&stype=-7&sTG=26&sView=week&sLoc=0" target="_blank" class="bg-primary text-on-primary px-12 py-6 rounded-lg font-button-text text-button-text hover-gold-glow uppercase tracking-widest text-lg inline-block">
+                Réserve ton premier cours dès maintenant
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant py-section-gap">
+        <!-- Injected by js/components.js -->
+    </footer>
+</body>
+</html>

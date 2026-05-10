@@ -1,0 +1,257 @@
+/* 
+   L'Envol Arts Aériens - Global Design System 
+   Synchronized with Stitch Design (Version 5)
+*/
+
+:root {
+    /* Brand Colors */
+    --primary: #f2ca50;
+    --on-primary: #3c2f00;
+    --primary-container: #d4af37;
+    --on-primary-container: #554300;
+    --primary-fixed: #ffe088;
+    --primary-fixed-dim: #e9c349;
+    
+    --secondary: #c6c6c7;
+    --on-secondary: #1a1c1c;
+    --secondary-container: #454747;
+    
+    --tertiary: #d0cecd;
+    --tertiary-container: #b5b2b2;
+    
+    --surface: #131313;
+    --on-surface: #e2e2e2;
+    --on-surface-variant: #d0c5af;
+    --surface-variant: #353535;
+    --surface-container-lowest: #0e0e0e;
+    --surface-container-low: #1b1b1b;
+    --surface-container: #1f1f1f;
+    --surface-container-high: #2a2a2a;
+    --surface-container-highest: #353535;
+    
+    --background: #131313;
+    --on-background: #e2e2e2;
+    
+    --outline: #99907c;
+    --outline-variant: #4d4635;
+    
+    --error: #ffb4ab;
+    --on-error: #690005;
+    
+    /* Typography Families */
+    --font-display: 'Playfair Display', serif;
+    --font-heading: 'Sora', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    
+    /* Spacing & Radius */
+    --margin-desktop: 80px;
+    --margin-mobile: 20px;
+    --gutter: 24px;
+    --section-gap: 120px;
+    --container-max: 1440px;
+    
+    --radius-sm: 0.25rem;
+    --radius-default: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-full: 9999px;
+    
+    /* Transitions */
+    --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-fast: all 0.3s ease;
+}
+
+/* Premium Cinematic Filter */
+.premium-cinematic {
+    filter: grayscale(100%) contrast(1.1) brightness(0.9);
+    transition: var(--transition);
+}
+
+.premium-cinematic:hover {
+    filter: grayscale(0%) contrast(1) brightness(1);
+}
+
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--on-surface);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface-container-lowest);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--outline-variant);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Common Components */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: var(--radius-xl);
+}
+
+.hero-aura {
+    box-shadow: 0 0 40px 10px rgba(212, 175, 55, 0.15);
+}
+
+.hover-gold-glow {
+    transition: var(--transition);
+}
+
+.hover-gold-glow:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    transform: translateY(-4px);
+}
+
+/* Material Symbols Overrides */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+/* Page Specific Cards */
+.event-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.event-card:hover {
+    border-color: rgba(242, 202, 80, 0.3);
+    transform: scale(1.03);
+    background: rgba(255,255,255,0.08);
+}
+
+.level-pill {
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(242, 202, 80, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(242, 202, 80, 0.2);
+    font-weight: 600;
+}
+
+/* Contact Form Styles */
+.contact-input {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--outline-variant);
+    color: var(--on-surface);
+    transition: var(--transition);
+}
+
+.contact-input:focus {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 15px rgba(242, 202, 80, 0.1);
+}
+
+/* Gallery & Masonry */
+.masonry-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: var(--on-primary);
+}
+
+.gallery-item img {
+    transition: var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Horaire Page Styles */
+.ribbon-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    width: 100%;
+    margin: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ribbon-divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: wave-motion 3s infinite linear;
+}
+
+@keyframes wave-motion {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--on-surface);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    margin-top: 10px;
+}

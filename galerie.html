@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr-CA">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Galerie | L'ENVOL Arts Aériens Québec</title>
+    <meta name="description" content="Découvrez l'univers de L'Envol à travers nos photos de performances, de cours et de notre studio à Québec.">
+    
+    <!-- Scripts & Styles -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Sora:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary/30">
+    
+    <header id="main-header" class="bg-background/80 backdrop-blur-xl sticky top-0 z-50 border-b border-primary/20 shadow-2xl">
+        <!-- Injected by js/components.js -->
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover premium-cinematic opacity-50" alt="Ethereal gallery hero" src="assets/gallery_performance_1.png">
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+            </div>
+            <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full text-center">
+                <h1 class="font-display text-5xl md:text-display-hero text-white mb-6 leading-tight">Notre <span class="text-primary italic">Galerie</span></h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Explorez l'univers de L'Envol à travers les moments capturés de nos performances, de nos cours et de notre communauté.
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+            <!-- Filter Bar -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <button class="filter-btn active px-6 py-2 rounded-full border border-primary/30 font-heading text-xs tracking-widest transition-all hover:bg-primary/20" data-filter="all" onclick="filterGallery('all')">TOUTES</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-primary/30 font-heading text-xs tracking-widest transition-all hover:bg-primary/20" data-filter="performance" onclick="filterGallery('performance')">PERFORMANCES</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-primary/30 font-heading text-xs tracking-widest transition-all hover:bg-primary/20" data-filter="studio" onclick="filterGallery('studio')">STUDIO</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-primary/30 font-heading text-xs tracking-widest transition-all hover:bg-primary/20" data-filter="communaute" onclick="filterGallery('communaute')">COMMUNAUTÉ</button>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="masonry-grid" id="gallery-grid">
+                <!-- Item 1: Performance -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="performance">
+                    <img src="assets/gallery_performance_1.png" alt="Performance Aérienne" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+                
+                <!-- Item 2: Hoop -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="performance studio">
+                    <img src="assets/hoop.png" alt="Cerceau Aérien" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+
+                <!-- Item 3: Community -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="communaute">
+                    <img src="assets/gallery_community_1.png" alt="Communauté L'Envol" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+
+                <!-- Item 4: Detail -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="studio">
+                    <img src="assets/gallery_detail_1.png" alt="Détail Studio" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+
+                <!-- Item 5: Pole -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="performance studio">
+                    <img src="assets/pole.png" alt="Pole Fitness" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+
+                <!-- Item 6: Performance 2 -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="performance">
+                    <img src="assets/gallery_performance_2.png" alt="Spectacle de Tissus" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+
+                <!-- Item 7: Silks -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="performance">
+                    <img src="assets/silks.png" alt="Tissus Aériens" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+
+                <!-- Item 8: Studio 2 -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="studio">
+                    <img src="assets/gallery_studio_2.png" alt="Espace de Pratique" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+
+                <!-- Item 9: Hammock -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="performance">
+                    <img src="assets/hammock.png" alt="Hamac Aérien" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+
+                <!-- Item 10: Community 2 -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="communaute">
+                    <img src="assets/gallery_community_2.png" alt="Célébration Studio" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+                
+                <!-- Item 11: Performance 3 -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="performance">
+                    <img src="assets/gallery_performance_3.png" alt="Détail Performance" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+
+                <!-- Item 12: Silks CTA variant -->
+                <div class="masonry-item gallery-item group relative cursor-pointer overflow-hidden rounded-xl" data-category="performance">
+                    <img src="assets/aerial-silks-cta.png" alt="Performance Tissus" class="w-full premium-cinematic" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl">zoom_in</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden items-center justify-center p-4 md:p-10 transition-all duration-300 opacity-0">
+            <button id="close-lightbox" class="absolute top-6 right-6 text-white hover:text-primary transition-colors z-[110]">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+            <img id="lightbox-img" src="" alt="Zoomed image" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl scale-90 transition-transform duration-300">
+        </div>
+    </main>
+
+    <footer id="main-footer" class="py-section-gap bg-surface-container-lowest">
+        <!-- Injected by js/components.js -->
+    </footer>
+
+    <!-- Component Injection -->
+    <script src="js/components.js"></script>
+    
+    <script>
+        // Filtering Logic
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-filter') === category);
+            });
+
+            items.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                if (category === 'all' || itemCategory.includes(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeLightbox = document.getElementById('close-lightbox');
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                setTimeout(() => {
+                    lightbox.classList.add('opacity-100');
+                    lightboxImg.classList.remove('scale-90');
+                    lightboxImg.classList.add('scale-100');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function hideLightbox() {
+            lightbox.classList.remove('opacity-100');
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-90');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        closeLightbox.addEventListener('click', hideLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                hideLightbox();
+            }
+        });
+
+        // Intersection Observer for Reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'all 0.6s ease-out';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>

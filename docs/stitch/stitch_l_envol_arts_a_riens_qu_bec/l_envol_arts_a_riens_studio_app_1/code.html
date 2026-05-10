@@ -1,0 +1,355 @@
+<!DOCTYPE html><html class="dark" lang="fr-CA"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>L'ENVOL | Arts Aériens Québec</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Sora:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-tertiary-container": "#454545",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#393939",
+                        "secondary": "#c6c6c7",
+                        "surface-tint": "#e9c349",
+                        "surface": "#131313",
+                        "primary-container": "#d4af37",
+                        "outline-variant": "#4d4635",
+                        "surface-container": "#1f1f1f",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-secondary-container": "#b4b5b5",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-surface": "#e2e2e2",
+                        "error-container": "#93000a",
+                        "on-tertiary": "#313030",
+                        "surface-container-highest": "#353535",
+                        "on-primary": "#3c2f00",
+                        "tertiary-fixed": "#e5e2e1",
+                        "secondary-container": "#454747",
+                        "outline": "#99907c",
+                        "inverse-surface": "#e2e2e2",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "primary-fixed": "#ffe088",
+                        "tertiary-container": "#b5b2b2",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-background": "#e2e2e2",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-primary": "#735c00",
+                        "surface-variant": "#353535",
+                        "on-primary-fixed": "#241a00",
+                        "background": "#131313",
+                        "surface-container-low": "#1b1b1b",
+                        "inverse-on-surface": "#303030",
+                        "primary": "#f2ca50",
+                        "on-surface-variant": "#d0c5af",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "tertiary": "#d0cecd",
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-secondary": "#2f3131",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-desktop": "80px",
+                        "base": "4px",
+                        "margin-mobile": "20px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Sora"],
+                        "display-hero-mobile": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "display-hero": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Sora"],
+                        "headline-lg": ["Playfair Display"],
+                        "button-text": ["Sora"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "display-hero-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-hero": ["84px", {"lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                        "button-text": ["16px", {"lineHeight": "20px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .ribbon-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            width: 100%;
+            margin: 60px 0;
+        }
+        .hero-aura {
+            box-shadow: 0 0 40px 10px rgba(212, 175, 55, 0.15);
+        }
+        .hover-gold-glow:hover {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- Top Navigation Bar -->
+<header class="bg-background/80 backdrop-blur-xl dark:bg-background/80 docked full-width top-0 sticky z-50 border-b border-primary/20 shadow-2xl">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-display-hero text-headline-md text-primary tracking-widest">L'ENVOL</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-caps text-label-caps" href="#">À Propos</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors font-label-caps text-label-caps" href="#">Cours</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors font-label-caps text-label-caps" href="#">Horaire</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors font-label-caps text-label-caps" href="#">Évènements</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors font-label-caps text-label-caps" href="#">Galerie</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors font-label-caps text-label-caps" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-primary font-button-text text-button-text px-4 py-2 hover:bg-primary/10 transition-all duration-300 rounded-lg">Espace Client</button>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-button-text text-button-text hover-gold-glow">Réserver</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="A luxurious and cinematic background featuring the L'Envol logo and a performer on a pole surrounded by golden smoke and light." src="https://lh3.googleusercontent.com/aida/ADBb0uhNQeJ_3blT0xDUjdWEzIEDxTP7aWd3hA6DmeDeE3WGz5hFtUZXiaaqx8xkitTVus4ktigl2pHTBHqRCyTvpNHMsAHqPjYY6IKr0VDVqBV1RLS6OF9uq8BWCDXXx80j9yzsFl1WQNhKjmdmSqlX1F7_Fp3QILHvupQ9YqyciYMijSQwdHFkiSpC7O2yAvOYiTd3nQTVkQGSKFX24f6Xgz5oj89GDdtRLbifKZsy6wsgBQ1Xw1_WllKKLRh3gUXZLoJpofMdtPgQ9A">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-3xl">
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-white mb-6 leading-tight">Prenez<br><span class="text-primary italic">votre envol.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    Découvrez l'élégance et la force des arts du cirque. Cours de pole fitness, cerceau aérien, tissus et hamac au cœur de Québec.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-lg font-button-text text-button-text hover-gold-glow uppercase tracking-widest">Voir l'horaire</button>
+<button class="border border-white/30 text-white px-10 py-5 rounded-lg font-button-text text-button-text hover:bg-white/10 transition-all uppercase tracking-widest backdrop-blur-md">Réserver un essai</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Studio Intro Section -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">L'Envol arts aériens</h2>
+<p class="font-headline-md text-headline-md text-on-surface leading-relaxed">
+                    Un sanctuaire où le corps s'exprime, se renforce et s'élève au-delà des limites terrestres.
+                </p>
+<button class="bg-transparent border border-primary text-primary px-8 py-4 rounded-lg font-button-text text-button-text hover:bg-primary/10 transition-all uppercase tracking-widest">
+                    Découvrir le studio
+                </button>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<img class="relative rounded-xl w-full h-[500px] object-cover shadow-2xl" data-alt="An expansive, modern aerial arts studio in Quebec featuring high ceilings and professional rigs. Multiple vibrant aerial silks in turquoise and red hang alongside silver aerial hoops over thick lavender safety mats. The floor is dark and professional, with bright studio lighting creating a clean, high-performance atmosphere consistent with the L'Envol brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuI_FOPCqJDyR9KMj58JiEtkF9bjzwJzd06KZE-5WEEUhqfuotcDkGp68pV06qQy7kRrpq_qguNb4PS4Ne1uLsFX0EwXiKtix8_GboCOCZn6EQodfl5m3M1Fzk70WyqvcUzV6gpH6LDMcU9qzGMImc1H752-B6TwXBxXA4k_VMNL4wOc5jWRW86a-w_2KBUyxmHfcPgtzfC9CQDgJxqSwu9ywIbgquAeYk9vabIL7e-0cB6Gj78zKPaU91wmnmdp9FYvBBJuCHKuE">
+</div>
+</div>
+</section>
+<div class="ribbon-divider"></div>
+<!-- Courses Bento Grid -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16">
+<h2 class="font-display-hero text-headline-lg text-primary mb-4">Cours en vedette</h2>
+<p class="text-on-surface-variant font-body-lg">Des disciplines pour tous les niveaux, de l'initiation à la performance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Course 1 -->
+<div class="glass-card p-6 rounded-xl group hover-gold-glow flex flex-col h-full">
+<div class="overflow-hidden rounded-lg mb-6 aspect-[3/4]">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="A black and white artistic photograph of a pole fitness athlete performing a powerful, controlled inversion. The lighting is dramatic and cinematic, highlighting muscle definition and elegant lines against a dark studio background. The overall aesthetic is professional, sophisticated, and athletic, reflecting the high-performance culture of the Quebec studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwN28Zi5KoSNt7bDOoG2iXdGF9Gs_eKRLdhYGSrkLwOebVVjKn4KZz6Zq2TjeHG_jQNnmjbVVH10UGBq-z4PaLnGz93BMIYj37YHdJYbS160c4y_La6WvgMkvasG0lhOal7SZJmy8n0rR2D86xXB36GtMgVDhuTQ4dViSZXv_bzdkT1bIj3e-w3Bv9apYxrdfIbh5-vcnZhMW71XNWaNo_wo7o5_0jNKcStvas8MVTOIMXhsUZNuRay372mcbVjBTPWK5AEQRKPOM">
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Pole Fitness</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow">Alliez force athlétique et grâce chorégraphique autour de la barre.</p>
+<div class="flex items-center text-primary font-label-caps text-label-caps gap-2 group/link">
+                    Détails <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Course 2 -->
+<div class="glass-card p-6 rounded-xl group hover-gold-glow flex flex-col h-full">
+<div class="overflow-hidden rounded-lg mb-6 aspect-[3/4]">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="An ethereal grayscale image of a performer in mid-air within a silver aerial hoop. The composition is dynamic and focuses on the circular form of the apparatus contrasting with the performer's graceful pose. The lighting creates a high-contrast cinematic effect, maintaining the sophisticated dark-themed aesthetic of the L'Envol arts aériens brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx9aPxxGKkeeOpw8W0DmdF0TJR9az80OoelvDHrhFgiTkuQOFA2oP4e7uhp6GSsnIYpHewdpZU8aCKSFUF5qz14pno2zZmOx89aFL8WnI84Wyw8LoQlNGY0Gwm5AO_EwRBLZ6Bk1SxibjJdDszKYe241584HGWN5g0IXzlPD9FtOVVx_3v_mOzwnhSRqIOeKs-GHT1A0BkhoTATXFOcD4FtP64TvxNpf9MEqnrby-7XbytTwoxezzJ_tamWhVsMc1dogH1s7cRFqc">
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Cerceau Aérien</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow">L'art de la contorsion et de l'équilibre dans les airs.</p>
+<div class="flex items-center text-primary font-label-caps text-label-caps gap-2 group/link">
+                    Détails <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Course 3 -->
+<div class="glass-card p-6 rounded-xl group hover-gold-glow flex flex-col h-full">
+<div class="overflow-hidden rounded-lg mb-6 aspect-[3/4]">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="A dramatic black and white shot of long, flowing aerial silks suspended from a high industrial ceiling. The fabric cascades down like liquid, with a performer artfully wrapped within the folds. High-key lighting emphasizes the texture and verticality of the scene, creating an inspiring and elite atmosphere for the L'Envol studio in Quebec." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAVIHZN3EyKPa3k3Ax9K838rlXQrSw2dRxVBXKlFFcRqtKpRlMQZiQfwUkRQRs-eBB1IXF6h6sFqpCwwwKk3M2ZzKbr_qj90uv-qdWa9zp3IBOhfFDgJYbA849lO_Domv2ufgR-1fkU9T-Q1KOLPoYZeXSrHGIcU87aYheBnU7XwGpgyopBYdZQ2_nxsSaZgs-uS825TJSubXG8B679Y-84niOMPiDwrhINl4rLLWetqgwqD7DdXpH3Gt2BQi9NUMyjjlfq3wl1Kg">
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Tissus Aériens</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow">Grimpez, chutez et volez avec fluidité et contrôle.</p>
+<div class="flex items-center text-primary font-label-caps text-label-caps gap-2 group/link">
+                    Détails <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Course 4 -->
+<div class="glass-card p-6 rounded-xl group hover-gold-glow flex flex-col h-full">
+<div class="overflow-hidden rounded-lg mb-6 aspect-[3/4]">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" data-alt="A cinematic grayscale close-up of a yoga-inspired pose within an aerial hammock. The lighting is soft and moody, emphasizing the cocoon-like nature of the fabric. The image conveys a sense of empowerment and serene focus, perfectly aligned with the ethereal and professional brand identity of this premier circus institution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoPhtChWC4rCe1_TrjVFkbBwaI_TIJJy48sTSi1Z7wXrMUAsqf6sREIcNe1kgysLK1JRGP8kJ7oONE77PYASMDZZn6_OtpbIxGLej2r4oyeag_Kujk58ND7wlKB1nF6YiRy-DCv_6LLjqNdDy83aR2GbSGBgu5D9-0g27D32DSrQj68bf7U_vEo4JMednOXFJxyGEbvorqcmuBhbDrm12ApxJZeH3t9vWXZkhXcco-iRmFWJcGoEBR3133vOjGMdqMaOPljROF7js">
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Hamac Aérien</h3>
+<p class="text-on-surface-variant font-body-md mb-6 flex-grow">Une approche plus accessible et sculpturale des arts aériens.</p>
+<div class="flex items-center text-primary font-label-caps text-label-caps gap-2 group/link">
+                    Détails <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-section-gap bg-surface-container-low/50">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center">
+<h2 class="font-display-hero text-headline-lg text-white mb-12">L'avis de nos clients</h2>
+<div class="flex flex-col items-center mb-16">
+<span class="font-label-caps text-label-caps text-primary tracking-widest mb-4">EXCELLENT</span>
+<div class="flex gap-1 text-primary mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant font-body-md">Basé sur 49 avis Google</p>
+<img alt="Google" class="h-8 mt-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc8JAr66inxF4aDz5K41T9zerYAetFxmhqEGoK7rLokARF4eb0Q9WNpPW0LevPr1uU9K7-WVoOCf2X_vC7hBRjwsTQC-6MzSaWzeUDZFaAERdO94Ppt1gfoWyZXDTocfoNVOCdxZRsXwkO0mio1YWrX6K-OEpKTJzchSfTiG6DbsDa-z3O6nZZtWKkrJ4nSgmn0USxQlEFSGO7gbm1rmZyLVwU3oNtgrywfkvaJAbPUM1VNOOcPkgMZaOTiD1mrL1FcGr3UgNKnTQ">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-card p-8 rounded-xl text-left">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">K</div>
+<div>
+<h4 class="font-headline-md text-base text-white">Karine Brunel</h4>
+<p class="text-xs text-on-surface-variant">Il y a 4 semaines</p>
+</div>
+</div>
+<p class="text-on-surface italic font-body-md">"Très beau studio, neuf et propre. L'ambiance est incroyable et les profs sont ultra compétents."</p>
+</div>
+<div class="glass-card p-8 rounded-xl text-left border-primary/40 scale-105 shadow-2xl relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">M</div>
+<div>
+<h4 class="font-headline-md text-base text-white">Myriam Grenier</h4>
+<p class="text-xs text-on-surface-variant">Il y a 1 mois</p>
+</div>
+</div>
+<p class="text-on-surface italic font-body-md">"J'ai découvert cet endroit pour pratiquer le pole fitness et j'adore. Beaucoup d'espace pour s'entraîner et une belle communauté."</p>
+</div>
+<div class="glass-card p-8 rounded-xl text-left">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold">J</div>
+<div>
+<h4 class="font-headline-md text-base text-white">Jessica Levesque</h4>
+<p class="text-xs text-on-surface-variant">Il y a 1 mois</p>
+</div>
+</div>
+<p class="text-on-surface italic font-body-md">"Incroyable espace où découvrir de nouvelles façons de bouger et de se sentir bien dans son corps. Je recommande!"</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Banner -->
+<section class="relative py-section-gap overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-gradient-to-r from-primary-container/40 to-background"></div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30" data-alt="A breathtaking golden hour shot of a gymnast performing a majestic pose on aerial silks. The light is warm and rich, creating a luminous amber glow that fills the frame. The background is a sophisticated dark studio, making the golden-lit silks and performer appear to float in a void of elegance and aspiration. Perfect for an empowering call to action." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDajeeizTvf_qwPZzkuGM0bMejl6egIKhiR0DYjBQU1_OyyF3WT9izA3cX3OWuEgryhJrHCFImfgwITpGgkPiMnV2a4MUcdjQ7ulGcdbM_AOb5qRF9I3_YLJR9Uft49waABQV35pjWUEf5IJFXHwuSp-MkXngcZ8cNVI8cB6F2M_oAelPL_qEPKa-LZEBFM_BzkzcqR2M8M-pcoJfZnhpEwR-G6qBk9L_kBrgX9bOZwothSVHJfB5q4j6DPxXABPDR4HjjvPQ3cOo">
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto text-center">
+<h2 class="font-headline-lg text-display-hero text-white mb-8">Prête à t'envoler?</h2>
+<button class="bg-primary text-on-primary px-12 py-6 rounded-lg font-button-text text-button-text hover-gold-glow uppercase tracking-widest text-lg">
+                Réserve ton premier cours dès maintenant
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-display-hero text-headline-md text-primary">L'ENVOL</div>
+<p class="font-body-md text-on-surface-variant">Viens prendre ton envol avec nous dans un espace dédié à l'excellence et au dépassement.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-white group-hover:text-on-primary">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-white group-hover:text-on-primary">group</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-8">Liens Légaux</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Termes et conditions</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Politique de confidentialité</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Foire aux questions</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Partenaires</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-8">Liens Rapides</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">À propos</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Cours</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Horaire et Tarifs</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Évènements &amp; Ateliers</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Galerie</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-8">Nos coordonnées</h4>
+<div class="space-y-4 text-on-surface-variant font-body-md">
+<p class="flex gap-3"><span class="material-symbols-outlined text-primary text-sm">location_on</span> 454 Av. Marconi, Québec, QC, G1N 4A8</p>
+<p class="flex gap-3"><span class="material-symbols-outlined text-primary text-sm">mail</span> lenvol.arts.aeriens@gmail.com</p>
+<p class="flex gap-3"><span class="material-symbols-outlined text-primary text-sm">call</span> (418) 431-7010</p>
+<div class="mt-6 rounded-lg overflow-hidden border border-outline-variant h-32">
+<img class="w-full h-full object-cover" data-alt="A stylized minimalist map of Quebec City, rendered in a sophisticated dark theme with metallic gold highlights for points of interest. The map uses deep blacks and grays, maintaining the brand's professional and elite aesthetic while providing clear geographical information." data-location="Québec, Canada" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxzTJqAH1bnIMh6oqfmGGvxtp2dKOWZeAVnfzL-WUj4q_AxhtFZwRKgaxq1iVKXiL_bxx8qDES0kZU3kiLksQvkc9ZuBLp5_MkgFXEGlwuaRrs88YPfH6kF4v9qYpFAcJ5YUwAeDr869wDWCZQTkjGAYcnykN39-KDNPbgrNrN0pEaLC4Lcfevwaw37GIHF4qsX8MHLJSaA-2nsPx9exvm6Xw-Mja9QZD3lbLyxbHtFzxxN4inoHn1P_bD8SpEb053wK_b5QmY9Uo">
+</div>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto mt-20 pt-8 border-t border-outline-variant text-center text-on-surface-variant/60 font-body-md text-sm">
+<p class="">© 2024 L'Envol Arts Aériens. Tous droits réservés. Propulsé par la passion.</p>
+<p class="mt-2">Made with <span class="text-primary">♥</span> by Les Socialites</p>
+</div>
+</footer>
+
+
+</body></html>

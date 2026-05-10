@@ -1,0 +1,213 @@
+{
+  "branding": {
+    "colorScheme": "dark",
+    "fonts": [
+      {
+        "family": "Lato",
+        "role": "body"
+      },
+      {
+        "family": "Poppins",
+        "role": "heading"
+      },
+      {
+        "family": "Sora",
+        "role": "unknown"
+      },
+      {
+        "family": "Good Karma",
+        "role": "unknown"
+      },
+      {
+        "family": "Playfair Display",
+        "role": "display"
+      }
+    ],
+    "colors": {
+      "primary": "#551EF7",
+      "secondary": "#007CBA",
+      "accent": "#B8954C",
+      "background": "#171717",
+      "textPrimary": "#171717",
+      "link": "#B8954C"
+    },
+    "typography": {
+      "fontFamilies": {
+        "primary": "Lato",
+        "heading": "Poppins"
+      },
+      "fontStacks": {
+        "heading": [
+          "Good Karma",
+          "serif"
+        ],
+        "body": [
+          "Lato",
+          "sans-serif"
+        ],
+        "paragraph": [
+          "Playfair Display",
+          "sans-serif"
+        ]
+      },
+      "fontSizes": {
+        "h1": "119px",
+        "h2": "50px",
+        "body": "33px"
+      }
+    },
+    "spacing": {
+      "baseUnit": 4,
+      "borderRadius": "5px"
+    },
+    "components": {
+      "buttonPrimary": {
+        "background": "#171717",
+        "textColor": "#333333",
+        "borderRadius": "0px",
+        "borderRadiusCorners": {
+          "topLeft": "0px",
+          "topRight": "0px",
+          "bottomRight": "0px",
+          "bottomLeft": "0px"
+        },
+        "shadow": "none"
+      },
+      "buttonSecondary": {
+        "background": "transparent",
+        "textColor": "#FFFFFF",
+        "borderColor": "#FFFFFF",
+        "borderRadius": "6px",
+        "borderRadiusCorners": {
+          "topLeft": "6px",
+          "topRight": "6px",
+          "bottomRight": "6px",
+          "bottomLeft": "6px"
+        },
+        "shadow": "none"
+      }
+    },
+    "images": {
+      "logo": "https://lenvolartsaeriens.com/wp-content/uploads/2025/10/Envol_Arts_Aeriens_logo_bg-preview-.png",
+      "favicon": "https://lenvolartsaeriens.com/wp-content/uploads/2025/10/EnvolLogo-removebg-preview-150x150.png",
+      "ogImage": "https://lenvolartsaeriens.com/wp-content/uploads/2026/03/633381954_1405617061245800_2597545146300019328_n.jpg",
+      "logoHref": "https://lenvolartsaeriens.com"
+    },
+    "__llm_logo_reasoning": {
+      "selectedIndex": 0,
+      "reasoning": "Selected #0 because it is visible, located in the header, links to the homepage, and matches the favicon, making it the primary brand logo.",
+      "confidence": 0.95,
+      "source": "llm"
+    },
+    "__llm_button_reasoning": {
+      "primary": {
+        "index": 1,
+        "text": "Réserver un essai",
+        "reasoning": "Button #1 'Réserver un essai' is likely the primary CTA due to its action-oriented text, encouraging users to book a trial, which is a key conversion action for the site."
+      },
+      "secondary": {
+        "index": 7,
+        "text": "Réserve ton premier cours dès maintenant",
+        "reasoning": "Button #7 'Réserve ton premier cours dès maintenant' has a transparent background, making it suitable as a secondary CTA, offering a less prominent action."
+      },
+      "confidence": 0.9
+    },
+    "personality": {
+      "tone": "modern",
+      "energy": "medium",
+      "targetAudience": "fitness enthusiasts interested in aerial arts"
+    },
+    "designSystem": {
+      "framework": "custom",
+      "componentLibrary": ""
+    },
+    "confidence": {
+      "buttons": 0.9,
+      "colors": 0.9,
+      "overall": 0.9
+    },
+    "__llm_metadata": {
+      "logoSelection": {
+        "llmCalled": true,
+        "llmSucceeded": true,
+        "finalSource": "llm",
+        "rawLogoSelection": {
+          "selectedLogoIndex": 0,
+          "selectedLogoReasoning": "Selected #0 because it is visible, located in the header, links to the homepage, and matches the favicon, making it the primary brand logo.",
+          "confidence": 0.95
+        }
+      },
+      "buttonClassification": {
+        "llmCalled": true,
+        "llmSucceeded": true
+      }
+    }
+  },
+  "metadata": {
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "og:image:height": "2048",
+    "og:image:type": "image/jpeg",
+    "viewport": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+    "og:locale": "en_US",
+    "ogLocale": "en_US",
+    "language": "en-US",
+    "twitter:card": "summary_large_image",
+    "generator": [
+      "WordPress 6.9.4",
+      "Site Kit by Google 1.178.0",
+      "Elementor 4.0.7; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap"
+    ],
+    "tec-api-origin": "https://lenvolartsaeriens.com",
+    "og:image": "https://lenvolartsaeriens.com/wp-content/uploads/2026/03/633381954_1405617061245800_2597545146300019328_n.jpg",
+    "og:title": "Home - L'envol",
+    "ogSiteName": "L'envol",
+    "msapplication-TileImage": "https://lenvolartsaeriens.com/wp-content/uploads/2025/10/EnvolLogo-removebg-preview-300x300.png",
+    "ogUrl": "https://lenvolartsaeriens.com/",
+    "ogTitle": "Home - L'envol",
+    "article:publisher": "https://www.facebook.com/p/LEnvol-Arts-Ariens-61581048196675/",
+    "tec-api-version": "v1",
+    "et-api-version": "v1",
+    "modifiedTime": "2026-04-14T13:11:34+00:00",
+    "ogImage": "https://lenvolartsaeriens.com/wp-content/uploads/2026/03/633381954_1405617061245800_2597545146300019328_n.jpg",
+    "og:type": "website",
+    "ogDescription": "Prenez votre envol. Cours de pole fitness, cerceau aérien, tissus et hamac à Québec. Voir l’horaire Réserver un essai L’Envol arts aériens est un espace où le corps s’exprime, se […]",
+    "og:url": "https://lenvolartsaeriens.com/",
+    "title": "Home - L'envol",
+    "og:description": "Prenez votre envol. Cours de pole fitness, cerceau aérien, tissus et hamac à Québec. Voir l’horaire Réserver un essai L’Envol arts aériens est un espace où le corps s’exprime, se […]",
+    "og:image:width": "1536",
+    "et-api-origin": "https://lenvolartsaeriens.com",
+    "article:modified_time": "2026-04-14T13:11:34+00:00",
+    "og:site_name": "L'envol",
+    "favicon": "https://lenvolartsaeriens.com/wp-content/uploads/2025/10/EnvolLogo-removebg-preview-150x150.png",
+    "scrapeId": "019e0fcc-76f6-74c1-a129-726886bd114f",
+    "sourceURL": "https://lenvolartsaeriens.com/",
+    "url": "https://lenvolartsaeriens.com/",
+    "statusCode": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "timezone": "America/New_York",
+    "proxyUsed": "basic",
+    "indexId": "dd5357d8-7ee8-4765-9683-26241e1f0960",
+    "creditsUsed": 1
+  },
+  "images": [
+    "https://lenvolartsaeriens.com/wp-content/plugins/widgets-for-google-reviews-and-ratings/public/css/images/google-logo.svg",
+    "https://lh3.googleusercontent.com/a/ACg8ocLKJWTG5YpbcyQYuCOisxx_NN-HmitkEKpa41xtQVqKiF9pUA=s120-c-rp-mo-br100",
+    "https://lenvolartsaeriens.com/wp-content/uploads/2026/03/633381954_1405617061245800_2597545146300019328_n.jpg",
+    "https://lenvolartsaeriens.com/wp-content/plugins/widgets-for-google-reviews-and-ratings/public/css/images/Google_icon.svg",
+    "https://lh3.googleusercontent.com/a/ACg8ocIpRtQwAagbrnFU18IgUs_YuekO4e2dUtBxRvgPzZ82H860Cw=s120-c-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocKiyCvPkPShK4TcyF-cxosbJFcsbnSAXF_klbl_0IOAgePi-Q=s120-c-rp-mo-ba2-br100",
+    "https://lenvolartsaeriens.com/wp-content/uploads/2026/03/IMG_2178-1.jpg",
+    "https://lh3.googleusercontent.com/a-/ALV-UjUzgbfYZI97x0UP18txm-ibziKN084Tt9XYsCHYZlECuY7-MLfY=s120-c-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocKIeVkbIK6-zUqLhJyLjegIQ4H6jSf0wnamunxPEPr4WLIDvQ=s120-c-rp-mo-ba3-br100",
+    "https://lenvolartsaeriens.com/wp-content/uploads/2025/10/Envol_Arts_Aeriens_logo_bg-preview-.png",
+    "https://lenvolartsaeriens.com/wp-content/uploads/2026/03/a9160569-4e0b-4d10-a671-72727590bde9.jpeg",
+    "https://lh3.googleusercontent.com/a/ACg8ocK3L6iDGiYh-7oy3AhyyKxXvdx16hrTFgKtyP14pPQdre9-Yw=s120-c-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocI79z0C_DrJfYg2rsviZPNzWkw6eyDx8qGrGa8HBOQwuUzzVw=s120-c-rp-mo-ba2-br100",
+    "https://lenvolartsaeriens.com/wp-content/uploads/2026/03/ed98758f-3d23-4597-b84f-de9a3fec383f.jpeg",
+    "https://lh3.googleusercontent.com/a-/ALV-UjUP6HcCK7Jg3xko1FtPaTcSzVfR863YvFNgZ-FF5uehcOXENRBJ2A=s120-c-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocKS0hnZq96FVoW0hSXin-LS-rKxJJYchcnZ0I-y3YIhNW17Bw=s120-c-rp-mo-br100",
+    "https://lenvolartsaeriens.com/wp-content/uploads/2026/03/cd517505-2535-487f-976d-90d56f0219c0.jpeg",
+    "https://lh3.googleusercontent.com/a-/ALV-UjX66ctpNvWC7-fxuUhgiCdWQh9-il_25habB5ApUvIsPM2w-5TQ=s120-c-rp-mo-br100",
+    "https://lenvolartsaeriens.com/wp-content/uploads/2025/10/Envol_Arts_Aeriens_logo_bg-preview--150x150.png"
+  ]
+}
