@@ -123,6 +123,15 @@
 }
 
 
+/* Utility for hiding scrollbars but allowing scroll */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 /* Global Reset & Base Styles */
 * {
     margin: 0;
