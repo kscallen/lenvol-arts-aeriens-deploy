@@ -22,20 +22,21 @@
     </header>
 
     <main>
-        <!-- Hero Title Section -->
-        <section class="pt-section-gap pb-12 px-margin-desktop max-w-container-max mx-auto text-center">
-            <h1 class="section-title inline-block">Planifiez votre envol</h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Réservez vos cours hebdomadaires de pole fitness, cerceau et tissus aériens dans notre studio de Québec.</p>
+        <!-- Hero Section -->
+        <section class="relative py-12 md:py-24 overflow-hidden">
+            <div class="absolute inset-0 bg-primary/5"></div>
+            <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+                <h1 class="font-display text-4xl md:text-7xl text-white mb-6 uppercase tracking-tight">Horaire & <span class="text-primary">Réservations</span></h1>
+                <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto">
+                    Planifiez votre prochain envol. Réservez vos cours hebdomadaires à Québec.
+                </p>
+            </div>
         </section>
 
         <!-- Filters & Navigation -->
-        <section class="px-margin-desktop max-w-container-max mx-auto mb-16">
-            <div class="flex flex-wrap justify-between items-end gap-6 pb-8 border-b border-outline-variant">
-                <div class="flex gap-4">
-                    <button class="flex items-center gap-2 px-6 py-2 rounded-full border border-primary text-primary font-heading font-bold text-sm">
-                        <span class="material-symbols-outlined text-[18px]">calendar_month</span>
-                        Cette semaine
-                    </button>
+        <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-outline-variant">
+                <div class="flex flex-wrap justify-center gap-4">
                     <div class="flex items-center gap-2 bg-surface-container rounded-lg p-1 border border-outline-variant">
                         <button class="px-4 py-2 bg-primary text-on-primary rounded font-heading font-bold text-sm">Tout</button>
                         <button class="px-4 py-2 hover:bg-surface-variant transition-colors text-on-surface-variant font-heading font-bold text-sm">Pole</button>
@@ -51,27 +52,27 @@
             </div>
         </section>
 
-        <!-- Weekly Schedule Grid -->
-        <section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap overflow-x-auto">
-            <div id="schedule-grid" class="grid grid-cols-7 min-w-[1200px] gap-gutter">
+        <!-- Weekly Schedule Grid (Desktop) / List (Mobile) -->
+        <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+            <!-- Container that will hold the schedule -->
+            <div id="schedule-container">
                 <!-- Loading State -->
-                <div class="col-span-7 py-20 text-center opacity-40 italic font-heading">
+                <div class="py-20 text-center opacity-40 italic font-heading">
                     Chargement de l'horaire...
                 </div>
             </div>
         </section>
 
-
         <!-- CTA Section -->
-        <section class="mb-24 px-margin-desktop">
-            <div class="max-w-container-max mx-auto glass-card p-12 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden relative">
-                <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 bg-gradient-to-l from-primary to-transparent"></div>
-                <div class="relative z-10 text-center md:text-left">
-                    <h2 class="font-display text-4xl text-primary mb-4">Nouveau au studio&nbsp;?</h2>
+        <section class="mb-24 px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-container-max mx-auto glass-card p-8 md:p-12 rounded-2xl flex flex-col lg:flex-row items-center justify-between gap-8 overflow-hidden relative">
+                <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 bg-gradient-to-l from-primary to-transparent hidden md:block"></div>
+                <div class="relative z-10 text-center lg:text-left">
+                    <h2 class="font-display text-3xl md:text-4xl text-primary mb-4">Nouveau au studio&nbsp;?</h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Profitez de notre offre d'introduction pour découvrir nos différentes disciplines à tarif préférentiel.</p>
                 </div>
-                <div class="relative z-10">
-                    <a href="https://clients.mindbodyonline.com/classic/ws?studioid=5751367&stype=-7&sTG=26&sView=week&sLoc=0" target="_blank" class="bg-primary text-on-primary font-heading font-bold text-xl px-10 py-5 rounded hover-gold-glow hover:scale-105 transition-transform duration-300 inline-block">Acheter un essai (20$)</a>
+                <div class="relative z-10 w-full lg:w-auto">
+                    <a href="https://clients.mindbodyonline.com/classic/ws?studioid=5751367&stype=-7&sTG=26&sView=week&sLoc=0" target="_blank" class="w-full lg:w-auto text-center bg-primary text-on-primary font-heading font-bold text-lg md:text-xl px-10 py-5 rounded hover-gold-glow hover:scale-105 transition-transform duration-300 inline-block">Acheter un essai (20$)</a>
                 </div>
             </div>
         </section>
@@ -89,11 +90,11 @@
     <script src="js/components.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
-            const grid = document.getElementById('schedule-grid');
+            const container = document.getElementById('schedule-container');
             const { data: classes, error } = await window.mindbodyService.getClasses();
             
             if (error) {
-                grid.innerHTML = `<div class="col-span-7 py-20 text-center text-error">Erreur lors du chargement de l'horaire.</div>`;
+                container.innerHTML = `<div class="py-20 text-center text-error">Erreur lors du chargement de l'horaire.</div>`;
                 return;
             }
 
@@ -108,42 +109,67 @@
                 if (grouped[dayName]) grouped[dayName].push(c);
             });
 
-            grid.innerHTML = days.map(day => `
-                <div class="space-y-6">
-                    <div class="text-center py-4 border-b border-outline-variant mb-6">
-                        <h3 class="font-heading text-sm font-bold text-on-surface uppercase tracking-widest">${day}</h3>
-                        <p class="text-on-surface-variant text-xs mt-1">Saison 2024</p>
-                    </div>
-                    ${grouped[day].length > 0 ? grouped[day].map(c => {
-                        const spotsLeft = c.max_capacity - c.total_booked;
-                        const isFull = spotsLeft <= 0;
-                        return `
-                            <div class="glass-card p-4 rounded-xl group hover:border-primary/50 transition-all duration-300 flex flex-col gap-3 ${isFull ? 'opacity-60' : ''}">
-                                <div class="flex justify-between items-start">
-                                    <span class="bg-primary/20 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">${c.discipline}</span>
-                                    <span class="font-heading font-bold text-[12px] text-on-surface">${new Date(c.start_date_time).toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' })}</span>
-                                </div>
-                                <div>
-                                    <p class="font-heading font-bold text-lg text-primary mb-1">${c.name}</p>
-                                    <div class="flex items-center gap-2 text-on-surface-variant">
-                                        <span class="material-symbols-outlined text-[16px]">person</span>
-                                        <span class="font-body-md text-sm">${c.staff_name}</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-2 text-[12px] font-bold ${isFull ? 'text-on-surface-variant' : (spotsLeft < 3 ? 'text-error' : 'text-primary')}">
-                                    <span class="material-symbols-outlined text-[14px]">${isFull ? 'block' : 'event_seat'}</span>
-                                    ${isFull ? 'Complet' : `${spotsLeft} places restantes`}
-                                </div>
-                                ${isFull 
-                                    ? `<button class="w-full mt-2 py-2 bg-transparent border border-outline-variant text-on-surface-variant cursor-not-allowed rounded font-heading font-bold text-sm" disabled>Liste d'attente</button>`
-                                    : `<button onclick="bookClass('${c.id}')" class="w-full mt-2 py-2 bg-primary/10 border border-primary/20 hover:bg-primary hover:text-on-primary transition-all rounded font-heading font-bold text-sm">Réserver</button>`
-                                }
+            // Create desktop grid view
+            const desktopView = `
+                <div class="hidden lg:grid grid-cols-7 gap-4">
+                    ${days.map(day => `
+                        <div class="space-y-6">
+                            <div class="text-center py-4 border-b border-outline-variant mb-6">
+                                <h3 class="font-heading text-sm font-bold text-on-surface uppercase tracking-widest">${day}</h3>
+                                <p class="text-on-surface-variant text-[10px] mt-1">Saison 2024</p>
                             </div>
-                        `;
-                    }).join('') : `<div class="py-12 text-center text-on-surface-variant/30 italic font-body-md text-sm">Pas de cours planifié</div>`}
+                            ${grouped[day].length > 0 ? grouped[day].map(c => renderClassCard(c)).join('') : `<div class="py-8 text-center text-on-surface-variant/20 italic text-xs">Aucun cours</div>`}
+                        </div>
+                    `).join('')}
                 </div>
-            `).join('');
+            `;
+
+            // Create mobile list view (grouped by day, but stacked)
+            const mobileView = `
+                <div class="lg:hidden space-y-12">
+                    ${days.map(day => grouped[day].length > 0 ? `
+                        <div class="space-y-6">
+                            <h3 class="font-display text-2xl text-primary border-l-4 border-primary pl-4">${day}</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                ${grouped[day].map(c => renderClassCard(c)).join('')}
+                            </div>
+                        </div>
+                    ` : '').join('')}
+                </div>
+            `;
+
+            container.innerHTML = desktopView + mobileView;
         });
+
+        function renderClassCard(c) {
+            const spotsLeft = c.max_capacity - c.total_booked;
+            const isFull = spotsLeft <= 0;
+            const startTime = new Date(c.start_date_time).toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' });
+            
+            return `
+                <div class="glass-card p-5 rounded-xl group hover:border-primary/50 transition-all duration-300 flex flex-col gap-3 ${isFull ? 'opacity-60' : ''}">
+                    <div class="flex justify-between items-start">
+                        <span class="bg-primary/20 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">${c.discipline}</span>
+                        <span class="font-heading font-bold text-[12px] text-on-surface">${startTime}</span>
+                    </div>
+                    <div>
+                        <p class="font-heading font-bold text-base text-white mb-1 leading-tight">${c.name}</p>
+                        <div class="flex items-center gap-2 text-on-surface-variant">
+                            <span class="material-symbols-outlined text-[14px]">person</span>
+                            <span class="font-body-md text-xs">${c.staff_name}</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 text-[11px] font-bold ${isFull ? 'text-on-surface-variant' : (spotsLeft < 3 ? 'text-error' : 'text-primary')}">
+                        <span class="material-symbols-outlined text-[13px]">${isFull ? 'block' : 'event_seat'}</span>
+                        ${isFull ? 'Complet' : `${spotsLeft} places restantes`}
+                    </div>
+                    ${isFull 
+                        ? `<button class="w-full mt-2 py-2 bg-transparent border border-outline-variant text-on-surface-variant cursor-not-allowed rounded font-heading font-bold text-xs" disabled>Liste d'attente</button>`
+                        : `<button onclick="bookClass('${c.id}')" class="w-full mt-2 py-2 bg-primary/10 border border-primary/20 hover:bg-primary hover:text-on-primary transition-all rounded font-heading font-bold text-xs">Réserver</button>`
+                    }
+                </div>
+            `;
+        }
 
         async function bookClass(classId) {
             const user = await window.mindbodyService.getCurrentUser();

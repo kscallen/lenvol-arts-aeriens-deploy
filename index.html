@@ -24,16 +24,16 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[921px] flex items-center overflow-hidden">
+    <section class="relative min-h-[80vh] md:min-h-[921px] flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <!-- Restored owner hero image with cinematic adaptation -->
             <img class="w-full h-full object-cover opacity-60 premium-cinematic" alt="Studio owner performing an elegant pole fitness pose in a cinematic dark atmosphere with golden highlights and smoke" src="assets/hero-owner.png">
             <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
         </div>
-        <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+        <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
             <div class="max-w-3xl">
-                <h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-white mb-6 leading-tight">Prenez<br><span class="text-primary italic">votre envol.</span></h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                <h1 class="font-display-hero text-5xl md:text-display-hero text-white mb-6 leading-tight">Prenez<br><span class="text-primary italic">votre envol.</span></h1>
+                <p class="font-body-lg text-lg md:text-body-lg text-on-surface-variant mb-10 max-w-xl">
                     Découvrez l'élégance et la force des arts du cirque. Cours de pole fitness, cerceau aérien, tissus et hamac au cœur de Québec.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-6">
@@ -45,31 +45,31 @@
     </section>
 
     <!-- Studio Intro Section -->
-    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
-            <div class="space-y-8">
-                <h2 class="font-headline-lg text-headline-lg text-primary">L'Envol arts aériens</h2>
-                <p class="font-headline-md text-headline-md text-on-surface leading-relaxed">
+    <section class="py-20 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-gutter items-center">
+            <div class="space-y-8 order-2 lg:order-1">
+                <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary">L'Envol arts aériens</h2>
+                <p class="font-headline-md text-xl md:text-headline-md text-on-surface leading-relaxed">
                     L'Envol arts aériens est un sanctuaire où le corps s'exprime, se renforce et s'élève au-delà des limites terrestres. Un espace dédié à l'excellence du mouvement.
                 </p>
-                <button class="bg-transparent border border-primary text-primary px-8 py-4 rounded-lg font-button-text text-button-text hover:bg-primary/10 transition-all uppercase tracking-widest">
+                <a href="propos.html" class="inline-block bg-transparent border border-primary text-primary px-8 py-4 rounded-lg font-button-text text-button-text hover:bg-primary/10 transition-all uppercase tracking-widest">
                     Découvrir le studio
-                </button>
+                </a>
             </div>
-            <div class="relative group">
+            <div class="relative group order-1 lg:order-2">
                 <div class="absolute -inset-4 bg-primary/10 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
                 <!-- Using one of the generated quality images for consistency -->
-                <img class="relative rounded-xl w-full h-[500px] object-cover shadow-2xl premium-cinematic" alt="Artiste de cirque au studio L'Envol" src="assets/aerial-hoop.png">
+                <img class="relative rounded-xl w-full h-[300px] md:h-[500px] object-cover shadow-2xl premium-cinematic" alt="Artiste de cirque au studio L'Envol" src="assets/aerial-hoop.png">
             </div>
         </div>
     </section>
 
-    <div class="ribbon-divider"></div>
+    <div class="ribbon-divider my-12 md:my-24"></div>
 
     <!-- Courses Bento Grid -->
-    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+    <section class="py-20 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div class="mb-16">
-            <h2 class="font-display-hero text-headline-lg text-primary mb-4">Cours en vedette</h2>
+            <h2 class="font-display-hero text-4xl md:text-headline-lg text-primary mb-4">Cours en vedette</h2>
             <p class="text-on-surface-variant font-body-lg">Des disciplines pour tous les niveaux, de l'initiation à la performance.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -78,7 +78,7 @@
                 <div class="overflow-hidden rounded-lg mb-6 aspect-[3/4]">
                     <img class="w-full h-full object-cover premium-cinematic scale-100 group-hover:scale-110" alt="Pole Fitness" src="assets/pole-fitness.png">
                 </div>
-                <h3 class="font-headline-md text-headline-md text-white mb-2">Pole Fitness</h3>
+                <h3 class="font-headline-md text-xl md:text-headline-md text-white mb-2">Pole Fitness</h3>
                 <p class="text-on-surface-variant font-body-md mb-6 flex-grow">Alliez force athlétique et grâce chorégraphique autour de la barre.</p>
                 <a href="https://lenvolartsaeriens.com/cours-pole-fitness-cerceau-aerien-tissus-hamac-debutant-intermeriaire-avance/" class="flex items-center text-primary font-label-caps text-label-caps gap-2 group/link cursor-pointer">
                     Détails <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
@@ -89,7 +89,7 @@
                 <div class="overflow-hidden rounded-lg mb-6 aspect-[3/4]">
                     <img class="w-full h-full object-cover premium-cinematic scale-100 group-hover:scale-110" alt="Cerceau Aérien" src="assets/aerial-hoop.png">
                 </div>
-                <h3 class="font-headline-md text-headline-md text-white mb-2">Cerceau Aérien</h3>
+                <h3 class="font-headline-md text-xl md:text-headline-md text-white mb-2">Cerceau Aérien</h3>
                 <p class="text-on-surface-variant font-body-md mb-6 flex-grow">L'art de la contorsion et de l'équilibre dans les airs.</p>
                 <a href="https://lenvolartsaeriens.com/cours-pole-fitness-cerceau-aerien-tissus-hamac-debutant-intermeriaire-avance/" class="flex items-center text-primary font-label-caps text-label-caps gap-2 group/link cursor-pointer">
                     Détails <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
@@ -100,7 +100,7 @@
                 <div class="overflow-hidden rounded-lg mb-6 aspect-[3/4]">
                     <img class="w-full h-full object-cover premium-cinematic scale-100 group-hover:scale-110" alt="Tissus Aériens" src="assets/aerial-silks-cta.png">
                 </div>
-                <h3 class="font-headline-md text-headline-md text-white mb-2">Tissus Aériens</h3>
+                <h3 class="font-headline-md text-xl md:text-headline-md text-white mb-2">Tissus Aériens</h3>
                 <p class="text-on-surface-variant font-body-md mb-6 flex-grow">Grimpez, chutez et volez avec fluidité et contrôle.</p>
                 <a href="https://lenvolartsaeriens.com/cours-pole-fitness-cerceau-aerien-tissus-hamac-debutant-intermeriaire-avance/" class="flex items-center text-primary font-label-caps text-label-caps gap-2 group/link cursor-pointer">
                     Détails <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
@@ -111,7 +111,7 @@
                 <div class="overflow-hidden rounded-lg mb-6 aspect-[3/4]">
                     <img class="w-full h-full object-cover premium-cinematic scale-100 group-hover:scale-110" alt="Hamac Aérien" src="assets/aerial-hammock.png">
                 </div>
-                <h3 class="font-headline-md text-headline-md text-white mb-2">Hamac Aérien</h3>
+                <h3 class="font-headline-md text-xl md:text-headline-md text-white mb-2">Hamac Aérien</h3>
                 <p class="text-on-surface-variant font-body-md mb-6 flex-grow">Une approche plus accessible et sculpturale des arts aériens.</p>
                 <a href="https://lenvolartsaeriens.com/cours-pole-fitness-cerceau-aerien-tissus-hamac-debutant-intermeriaire-avance/" class="flex items-center text-primary font-label-caps text-label-caps gap-2 group/link cursor-pointer">
                     Détails <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
@@ -121,9 +121,9 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-section-gap bg-surface-container-low/50">
-        <div class="px-margin-desktop max-w-container-max mx-auto text-center">
-            <h2 class="font-display-hero text-headline-lg text-white mb-12">L'avis de nos clients</h2>
+    <section class="py-20 md:py-section-gap bg-surface-container-low/50">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+            <h2 class="font-display-hero text-4xl md:text-headline-lg text-white mb-12">L'avis de nos clients</h2>
             <div class="flex flex-col items-center mb-16">
                 <span class="font-label-caps text-label-caps text-primary tracking-widest mb-4">EXCELLENT</span>
                 <div class="flex gap-1 text-primary mb-2">
@@ -135,7 +135,7 @@
                 </div>
                 <p class="text-on-surface-variant font-body-md">Basé sur 49 avis Google</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-gutter">
                 <div class="glass-card p-8 rounded-xl text-left">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">K</div>
@@ -146,7 +146,7 @@
                     </div>
                     <p class="text-on-surface italic font-body-md">"Très beau studio, neuf et propre. L'ambiance est incroyable et les profs sont ultra compétents."</p>
                 </div>
-                <div class="glass-card p-8 rounded-xl text-left border-primary/40 scale-105 shadow-2xl relative z-10">
+                <div class="glass-card p-8 rounded-xl text-left border-primary/40 md:scale-105 shadow-2xl relative z-10">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">M</div>
                         <div>
@@ -171,13 +171,13 @@
     </section>
 
     <!-- Call to Action Banner -->
-    <section class="relative py-section-gap overflow-hidden">
+    <section class="relative py-20 md:py-section-gap overflow-hidden">
         <div class="absolute inset-0 z-0">
             <div class="w-full h-full bg-gradient-to-r from-primary-container/40 to-background"></div>
             <img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30 premium-cinematic" alt="Golden Hour Performer" src="assets/aerial-silks-cta.png">
         </div>
-        <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto text-center">
-            <h2 class="font-headline-lg text-display-hero text-white mb-8">Prête à t'envoler&nbsp;?</h2>
+        <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+            <h2 class="font-headline-lg text-4xl md:text-display-hero text-white mb-8">Prête à t'envoler&nbsp;?</h2>
             <a href="https://clients.mindbodyonline.com/classic/ws?studioid=5751367&stype=-7&sTG=26&sView=week&sLoc=0" target="_blank" class="bg-primary text-on-primary px-12 py-6 rounded-lg font-button-text text-button-text hover-gold-glow uppercase tracking-widest text-lg inline-block">
                 Réserve ton premier cours dès maintenant
             </a>
