@@ -14,14 +14,8 @@ function injectHeader() {
     if (!headerPlaceholder) return;
     const navHTML = `
         <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20 md:h-24 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-primary/20">
-                    <span class="material-symbols-outlined text-on-primary text-2xl md:text-3xl">flight_takeoff</span>
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-display-hero text-lg md:text-xl text-primary tracking-widest leading-none">L'ENVOL</span>
-                    <span class="font-label-caps text-[8px] md:text-[10px] text-on-surface-variant tracking-[0.3em] uppercase opacity-60">Arts Aériens</span>
-                </div>
+            <a href="index.html" class="flex items-center gap-4 group">
+                <img src="assets/logo.png" alt="L'ENVOL Arts Aériens" class="h-14 md:h-20 w-auto group-hover:scale-105 transition-transform duration-500">
             </a>
 
             <nav class="hidden md:flex items-center gap-8">
@@ -47,7 +41,7 @@ function injectHeader() {
     <div id="mobile-menu" class="fixed inset-0 z-[999] bg-[#0e0e0e] transform translate-x-full transition-transform duration-500 md:hidden overflow-y-auto">
         <div class="flex flex-col min-h-full p-6 md:p-8">
             <div class="flex justify-between items-center mb-12">
-                <span class="font-display-hero text-2xl text-primary tracking-widest">L'ENVOL</span>
+                <img src="assets/logo.png" alt="L'ENVOL" class="h-12 w-auto">
                 <button id="close-menu" class="text-primary p-2">
                     <span class="material-symbols-outlined text-4xl">close</span>
                 </button>
@@ -118,7 +112,7 @@ function injectFooter() {
     const footerHTML = `
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div class="space-y-6">
-            <div class="font-display-hero text-headline-md text-primary">L'ENVOL</div>
+            <img src="assets/logo.png" alt="L'ENVOL Arts Aériens" class="h-20 md:h-24 w-auto">
             <p class="font-body-md text-on-surface-variant">Viens prendre ton envol avec nous dans un espace dédié à l'excellence et au dépassement.</p>
             <div class="flex gap-4">
                 <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary transition-colors group" href="https://www.facebook.com/p/LEnvol-Arts-Aeriens-61581048196675/">
