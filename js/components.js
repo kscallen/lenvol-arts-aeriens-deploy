@@ -34,10 +34,10 @@ function injectHeader() {
                 <a class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-button-text text-sm hover-gold-glow transition-all" href="espace-client.html">ESPACE CLIENT</a>
             </nav>
 
-            <div class="flex items-center gap-2 md:hidden">
-                <a href="horaire.html" class="bg-primary text-on-primary px-4 py-2 rounded-lg font-button-text text-xs hover-gold-glow">RÉSERVER</a>
+            <div class="flex items-center gap-1 sm:gap-2 md:hidden">
+                <a href="horaire.html" class="bg-primary text-on-primary px-3 py-2 rounded-lg font-button-text text-[10px] sm:text-xs hover-gold-glow">RÉSERVER</a>
                 <button id="mobile-menu-toggle" class="text-primary p-2 flex items-center justify-center" aria-label="Menu">
-                    <span class="material-symbols-outlined text-3xl">menu</span>
+                    <span class="material-symbols-outlined text-2xl sm:text-3xl">menu</span>
                 </button>
             </div>
         </div>
